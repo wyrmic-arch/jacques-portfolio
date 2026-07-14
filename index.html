@@ -266,6 +266,31 @@ body::after{
 .cn{font-size:.7rem;font-weight:500;color:var(--g4);letter-spacing:.15em;text-transform:uppercase}
 .cf{margin-top:60px;font-size:.55rem;font-weight:600;color:var(--g5);letter-spacing:.12em;text-transform:uppercase}
 
+/* ─── CONTACT FORM ─── */
+.cfrm{max-width:480px;margin:32px auto 0;text-align:left}
+.cfrm-g{margin-bottom:16px}
+.cfrm-l{display:block;font-size:.6rem;font-weight:600;color:var(--g4);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.cfrm-i,.cfrm-ta{
+  display:block;width:100%;font-family:'Space Grotesk','Inter',sans-serif;font-size:.75rem;
+  font-weight:500;color:var(--g1);background:var(--g9);border:2px solid var(--g5);
+  padding:10px 12px;outline:none;transition:border-color .2s
+}
+.cfrm-i:focus,.cfrm-ta:focus{border-color:var(--red)}
+.cfrm-ta{resize:vertical;min-height:100px}
+.cfrm-hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+.cfrm-btn{
+  display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',monospace;
+  font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;
+  color:var(--g2);border:3px solid var(--g5);padding:10px 28px;background:transparent;
+  transition:color .2s,background .2s,border-color .2s,transform .1s;cursor:pointer
+}
+.cfrm-btn:hover{color:var(--black);background:var(--red);border-color:var(--red)}
+.cfrm-btn:active{transform:scale(.96)}
+.cfrm-btn:disabled{opacity:.4;pointer-events:none}
+.cfrm-st{font-size:.65rem;font-weight:500;margin-top:12px;min-height:1.2em}
+.cfrm-st.is-ok{color:var(--g2)}
+.cfrm-st.is-err{color:var(--red)}
+
 /* ─── LIVE OVERLAY ─── */
 .lo{
   position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:32px
@@ -439,6 +464,27 @@ body::after{
     <a href="mailto:jacquesd264160@gmail.com" class="ce">jacquesd264160@gmail.com</a>
     <div class="cl"></div>
     <p class="cn">AVAILABLE FOR FREELANCE &amp; COLLABORATION</p>
+
+    <form class="cfrm" id="frm" novalidate>
+      <div class="cfrm-g">
+        <label class="cfrm-l" for="frm-n">NAME</label>
+        <input class="cfrm-i" id="frm-n" type="text" required maxlength="100">
+      </div>
+      <div class="cfrm-g">
+        <label class="cfrm-l" for="frm-e">EMAIL</label>
+        <input class="cfrm-i" id="frm-e" type="email" required maxlength="200">
+      </div>
+      <div class="cfrm-g">
+        <label class="cfrm-l" for="frm-m">MESSAGE</label>
+        <textarea class="cfrm-ta" id="frm-m" required maxlength="5000"></textarea>
+      </div>
+      <div class="cfrm-hp">
+        <label>Leave this empty</label>
+        <input type="text" id="frm-hp" tabindex="-1" autocomplete="off">
+      </div>
+      <button class="cfrm-btn" id="frm-btn" type="submit">&#x2192; SEND</button>
+      <div class="cfrm-st" id="frm-st"></div>
+    </form>
   </div>
   <div class="cf">&copy; 2026 JACQUES DU PLESSIS /// BUILT WITH CONCRETE &amp; STEEL</div>
 </section>
@@ -910,6 +956,24 @@ function rA(){
 }
 var ao=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){rA();ao.disconnect()}})},{threshold:.3});
 var aSec=document.querySelector('.about');if(aSec)ao.observe(aSec);
+
+/* ─── CONTACT FORM ─── */
+document.getElementById('frm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var btn=document.getElementById('frm-btn'),st=document.getElementById('frm-st');
+  var n=document.getElementById('frm-n').value.trim(),em=document.getElementById('frm-e').value.trim(),msg=document.getElementById('frm-m').value.trim(),hp=document.getElementById('frm-hp').value;
+  if(!n||!em||!msg){st.textContent='! ALL FIELDS REQUIRED';st.className='cfrm-st is-err';return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){st.textContent='! INVALID EMAIL';st.className='cfrm-st is-err';return}
+  st.textContent='';st.className='cfrm-st';btn.disabled=true;btn.textContent='\u2192 SENDING\u2026';
+  fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,email:em,message:msg,_hp:hp})})
+  .then(function(r){return r.json()})
+  .then(function(d){
+    if(d.success){st.textContent='\u2713 MESSAGE SENT';st.className='cfrm-st is-ok';document.getElementById('frm').reset()}
+    else{st.textContent='! '+d.error;st.className='cfrm-st is-err'}
+  })
+  .catch(function(){st.textContent='! NETWORK ERROR';st.className='cfrm-st is-err'})
+  .then(function(){btn.disabled=false;btn.textContent='\u2192 SEND'});
+});
 
 /* ─── INIT ─── */
 document.addEventListener('DOMContentLoaded',function(){bG();runBoot()});
