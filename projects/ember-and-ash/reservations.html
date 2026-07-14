@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations — Ember & Ash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      position: relative;
+      height: 40vh;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .page-hero__bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/hero.webp') center / cover no-repeat;
+      z-index: 0;
+    }
+    .page-hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26, 20, 16, 0.4) 0%, rgba(26, 20, 16, 0.75) 60%, var(--bg) 100%);
+      z-index: 1;
+    }
+    .page-hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 1.5rem;
+    }
+    .page-hero__title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--text);
+    }
+    .page-hero__subtitle {
+      font-family: var(--font-sans);
+      font-size: clamp(0.75rem, 1.2vw, 0.9375rem);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    .policies {
+      background: var(--bg-light);
+    }
+    .policies__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media (min-width: 640px) {
+      .policies__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .policy__title {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--amber);
+      margin-bottom: 0.5rem;
+    }
+    .policy__body {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    .reservations {
+      background: var(--bg);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Ember & Ash</a>
+      <ul class="nav__links">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="location.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="page-hero__content">
+      <h1 class="page-hero__title">Reservations</h1>
+      <p class="page-hero__subtitle">We keep a few tables for walk-ins, but a reservation ensures your place at the hearth.</p>
+    </div>
+  </section>
+
+  <section class="section reservations" id="reservations">
+    <div class="section__container">
+      <form class="reservation__form" id="reservationForm" novalidate>
+        <div class="reservation__row">
+          <div class="reservation__field">
+            <label for="resDate">Date</label>
+            <input type="date" id="resDate" required>
+          </div>
+          <div class="reservation__field">
+            <label for="resTime">Time</label>
+            <select id="resTime" required>
+              <option value="">Select a time</option>
+              <option value="17:00">5:00 PM</option>
+              <option value="17:30">5:30 PM</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="18:30">6:30 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="19:30">7:30 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="20:30">8:30 PM</option>
+              <option value="21:00">9:00 PM</option>
+            </select>
+          </div>
+          <div class="reservation__field">
+            <label for="resParty">Party Size</label>
+            <select id="resParty" required>
+              <option value="">Number of guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="7">7 Guests</option>
+              <option value="8">8 Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="reservation__row">
+          <div class="reservation__field">
+            <label for="resName">Name</label>
+            <input type="text" id="resName" placeholder="Your full name" required>
+          </div>
+          <div class="reservation__field">
+            <label for="resEmail">Email</label>
+            <input type="email" id="resEmail" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="reservation__field">
+          <label for="resNotes">Special Requests</label>
+          <textarea id="resNotes" rows="3" placeholder="Allergies, celebrations, seating preferences…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Confirm Reservation</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <h3 class="modal__title">Reservation Confirmed</h3>
+      <p class="modal__subtitle">We look forward to welcoming you.</p>
+      <div class="modal__details" id="modalDetails"></div>
+      <button class="btn btn--primary" id="modalClose">Close</button>
+    </div>
+  </div>
+
+  <section class="section policies">
+    <div class="section__container">
+      <h2 class="section__title section__title--centered">Dining Policies</h2>
+      <p class="section__subtitle">Everything you need to know before you visit</p>
+      <div class="policies__grid">
+        <div class="policy">
+          <p class="policy__title">Cancellation</p>
+          <p class="policy__body">We kindly ask for 24 hours&rsquo; notice if you need to cancel or modify your reservation. Late cancellations and no-shows may be subject to a $50 per person fee.</p>
+        </div>
+        <div class="policy">
+          <p class="policy__title">Dress Code</p>
+          <p class="policy__body">Smart casual is welcome. We ask that guests refrain from wearing strongly scented products, as they can interfere with the experience of the food and wine.</p>
+        </div>
+        <div class="policy">
+          <p class="policy__title">Dietary Restrictions</p>
+          <p class="policy__body">We accommodate most allergies and dietary restrictions with advance notice. Please include details in your special requests when booking, and confirm with your server upon arrival.</p>
+        </div>
+        <div class="policy">
+          <p class="policy__title">Private Dining</p>
+          <p class="policy__body">Our mezzanine table seats up to ten guests for a prix fixe experience. For inquiries, please email private@emberandash.com or call the restaurant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2026 Ember &amp; Ash. All rights reserved.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

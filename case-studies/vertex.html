@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex — Case Study | Jacques du Plessis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">JD</a>
+    <div class="nav-links">
+      <a href="../index.html#projects" class="nav-link">Work</a>
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <section class="case-hero">
+    <a href="../index.html#projects" class="case-back">← Back to Work</a>
+    <p class="case-category">Construction &amp; Development</p>
+    <h1 class="case-title">Vertex</h1>
+  </section>
+
+  <div class="live-preview" id="livePreview">
+    <div class="cover-state" id="coverState">
+      <img src="../projects/vertex/assets/images/hero.webp" alt="Vertex construction site">
+      <span class="cover-state-label">Click to preview live site</span>
+    </div>
+    <div class="frame-state" id="frameState">
+      <div class="frame-bar">
+        <div class="frame-dots">
+          <span class="frame-dot frame-dot--red"></span>
+          <span class="frame-dot frame-dot--yellow"></span>
+          <span class="frame-dot frame-dot--green"></span>
+        </div>
+        <div class="frame-address">vertexdevelopment.com</div>
+        <div class="frame-actions">
+          <button class="frame-action" id="frameOpen" data-url="../projects/vertex/index.html" title="Open in new tab">↗</button>
+          <button class="frame-action" id="frameClose" title="Close preview">✕</button>
+        </div>
+      </div>
+      <iframe class="frame-content" src="../projects/vertex/index.html" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" loading="lazy" title="Vertex live preview"></iframe>
+    </div>
+  </div>
+
+  <div class="case-content">
+    <div class="case-section">
+      <h2 class="case-section-label">What It Is</h2>
+      <p>Vertex is a five-page corporate website for Vertex Development Corp., a premier construction and development firm based in Toronto, Canada (Est. 1998). The site presents the company as a full-service, vertically integrated builder specializing in residential development, commercial construction, renovation and restoration, and project management.</p>
+      <p>The site features a full-viewport hero with animated stat counters (27 years, 340+ projects, 180 awards, 1,200 professionals), a portfolio grid of landmark projects, detailed service pages with a four-step build process, an about page with leadership team and six core values, and a contact page with inquiry form. The design language pairs deep navy backgrounds with warm orange accents — a classic, authoritative palette that signals stability and trust.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Why It Was Made</h2>
+      <p>A construction and development firm of this caliber needs an online presence that conveys gravitas, stability, and results to win large contracts. The brief demanded a digital "brochure" that could showcase a portfolio of physical assets in a visually immersive way, differentiate from competitors by emphasizing values and team expertise, and serve as a central hub for all stakeholder touchpoints — project inquiries, partnership requests, recruitment, and general contact.</p>
+      <p>The solution was a site built around trust signals: animated counters that demonstrate scale on scroll, a featured project grid with hover overlays, breadcrumb navigation for clear wayfinding, and dark/light section alternation for visual rhythm. The design deliberately avoids trendy effects in favor of a timeless, institutional feel appropriate for multi-million-dollar construction negotiations.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Who It Was Made For</h2>
+      <p>The primary audience is B2B and high-net-worth decision-makers in the real estate and construction ecosystem: real estate developers and investors seeking a reliable general contractor for large-scale projects; property owners and municipalities evaluating partners for public-private partnerships; architects and design firms assessing construction collaborators; and commercial tenants scouting developers for build-to-suit spaces.</p>
+      <p>A secondary audience is potential recruits — skilled professionals in construction, engineering, and project management exploring employment at a top-tier firm. The language, imagery, and values throughout the site are calibrated to project trustworthiness, scale, prestige, and technical competence — exactly what a developer or institutional client looks for in a multi-million-dollar construction partner.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-item-name">HTML5</div>
+          <div class="tech-item-desc">5 pages, semantic</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS3</div>
+          <div class="tech-item-desc">Custom properties, 1000+ lines</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Vanilla JS</div>
+          <div class="tech-item-desc">Animated counters, nav scroll, IntersectionObserver</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Google Fonts</div>
+          <div class="tech-item-desc">Cormorant Garamond + Inter</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">WebP</div>
+          <div class="tech-item-desc">9 optimized images</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS Grid</div>
+          <div class="tech-item-desc">Portfolio grid, service cards</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Unicode Icons</div>
+          <div class="tech-item-desc">No icon library</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Zero Frameworks</div>
+          <div class="tech-item-desc">No build step, pure static</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-footer">
+    <a href="../index.html#projects" class="case-footer-link">← Back to Work</a>
+    <a href="../projects/vertex/index.html" class="case-footer-link" target="_blank">View Live →</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script>initPreview('vertex');</script>
+</body>
+</html>

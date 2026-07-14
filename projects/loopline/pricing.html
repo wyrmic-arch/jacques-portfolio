@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Loopline</title>
+  <meta name="description" content="Simple, transparent pricing for Loopline. Start free. Upgrade when you need more power.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233b82f6'/><text x='16' y='22' text-anchor='middle' font-size='20' font-weight='800' fill='white'>L</text></svg>">
+</head>
+<body>
+
+  <!-- ═══ Nav ═══ -->
+  <nav class="nav" role="navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><span>⌘</span> Loopline</a>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html" style="color:var(--text);">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ Header ═══ -->
+  <section class="section" style="padding: 140px 0 60px; text-align: center; background-image: linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px); background-size: 60px 60px; position: relative;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% -20%, rgba(59, 130, 246, 0.08), transparent 60%); pointer-events: none;"></div>
+    <div class="container" style="position: relative;">
+      <span class="section-label">Pricing</span>
+      <h1 class="section-title">Simple, transparent pricing.</h1>
+      <p class="section-sub" style="margin: 0 auto;">Start for free. Upgrade when you need more power. No surprises, no hidden fees.</p>
+    </div>
+  </section>
+
+  <!-- ═══ Pricing ═══ -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+
+      <div class="toggle-wrap">
+        <span class="toggle-label-monthly active">Monthly</span>
+        <span class="toggle-switch" role="button" tabindex="0" aria-label="Toggle annual pricing"></span>
+        <span class="toggle-label-annual">Annual <span class="save-badge" style="display:none;">Save 17%</span></span>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <p class="pricing-desc">For small teams getting started.</p>
+          <div class="pricing-price">
+            <span class="amount">$0</span><span class="period">/mo</span>
+            <span class="strikethrough"></span>
+          </div>
+          <ul class="pricing-features">
+            <li>Up to 5 users</li>
+            <li>Up to 3 projects</li>
+            <li>Basic integrations (10)</li>
+            <li>2 GB storage</li>
+            <li>Community support</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <span class="pricing-badge">Most Popular</span>
+          <h3>Pro</h3>
+          <p class="pricing-desc">For growing teams who need more.</p>
+          <div class="pricing-price">
+            <span class="amount">$29</span><span class="period">/mo</span>
+            <span class="strikethrough"></span>
+          </div>
+          <ul class="pricing-features">
+            <li>Unlimited users</li>
+            <li>Unlimited projects</li>
+            <li>All integrations (200+)</li>
+            <li>50 GB storage</li>
+            <li>Priority support</li>
+            <li>Custom fields & templates</li>
+            <li>Advanced automations</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Start Free Trial</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <p class="pricing-desc">For organizations at scale.</p>
+          <div class="pricing-price">
+            <span class="amount">$99</span><span class="period">/mo</span>
+            <span class="strikethrough"></span>
+          </div>
+          <ul class="pricing-features">
+            <li>Unlimited everything</li>
+            <li>Unlimited storage</li>
+            <li>SLA guarantee (99.99%)</li>
+            <li>Dedicated success manager</li>
+            <li>SSO & SCIM</li>
+            <li>Audit logs</li>
+            <li>Custom integrations</li>
+          </ul>
+          <a href="#" class="btn">Contact Sales</a>
+        </div>
+      </div>
+
+      <!-- ═══ Compare Plans ═══ -->
+      <div style="margin-top:80px;">
+        <h2 class="section-title" style="text-align:center;font-size:clamp(24px,3vw,32px);">Compare Plans</h2>
+        <p class="section-sub" style="margin:0 auto 40px;text-align:center;">Find the right plan for your team.</p>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border);">
+                <th style="text-align:left;padding:14px 16px;color:var(--text-muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Feature</th>
+                <th style="text-align:center;padding:14px 16px;color:#fff;font-weight:600;">Starter</th>
+                <th style="text-align:center;padding:14px 16px;color:var(--blue);font-weight:600;">Pro</th>
+                <th style="text-align:center;padding:14px 16px;color:#fff;font-weight:600;">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">Users</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Up to 5</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Unlimited</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Unlimited</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">Projects</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Up to 3</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Unlimited</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Unlimited</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">Storage</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">2 GB</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">50 GB</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Unlimited</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">Integrations</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">10 basic</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">200+</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Custom</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">Support</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Community</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Priority</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Dedicated manager</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">Custom fields</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">—</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">✓</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">✓</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">Automations</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Basic</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Advanced</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">Custom</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">SSO / SCIM</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">—</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">—</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">✓</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;color:var(--text);">Audit logs</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">—</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">—</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">✓</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 16px;color:var(--text);">SLA guarantee</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">—</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">—</td>
+                <td style="padding:14px 16px;text-align:center;color:var(--text-muted);">99.99%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ═══ Pricing FAQ ═══ -->
+      <div style="margin-top:80px;">
+        <h2 class="section-title" style="text-align:center;font-size:clamp(24px,3vw,32px);">Pricing FAQ</h2>
+        <p class="section-sub" style="margin:0 auto 48px;text-align:center;">Have more questions about pricing?</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              Is there a free trial for paid plans?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Yes! Every paid plan comes with a 14-day free trial — no credit card required. You get full access to all Pro features during the trial. If you decide not to upgrade, your account automatically drops back to the free Starter plan with no data loss.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I switch plans anytime?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Absolutely. You can upgrade or downgrade your plan at any time with no penalties. Upgrades take effect immediately, and downgrades apply at the start of your next billing cycle. If you switch from annual to monthly, we'll prorate the remaining balance.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How does annual billing work?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Annual billing gives you a 17% discount compared to monthly. You're billed once per year and can cancel anytime. If you cancel mid-cycle, we'll issue a prorated refund for the remaining months. Annual plans also include priority support.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you offer custom enterprise pricing?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Yes. For organizations requiring custom terms, dedicated infrastructure, or advanced compliance needs, we offer tailored enterprise pricing. Contact our sales team and we'll put together a package that fits your requirements.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Loopline. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

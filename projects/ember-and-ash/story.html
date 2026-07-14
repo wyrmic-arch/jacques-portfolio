@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Ember & Ash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      position: relative;
+      height: 50vh;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .page-hero__bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/chef.webp') center / cover no-repeat;
+      z-index: 0;
+    }
+    .page-hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26, 20, 16, 0.4) 0%, rgba(26, 20, 16, 0.75) 60%, var(--bg) 100%);
+      z-index: 1;
+    }
+    .page-hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 1.5rem;
+    }
+    .page-hero__title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--text);
+    }
+    .page-hero__subtitle {
+      font-family: var(--font-sans);
+      font-size: clamp(0.75rem, 1.2vw, 0.9375rem);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    .chef-section {
+      background: var(--bg-light);
+    }
+    .chef-section__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .chef-section__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+    .chef-section__image .image-overlay {
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .chef-section__image .image-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .chef-section__name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--amber);
+      margin-bottom: 0.25rem;
+    }
+    .chef-section__title {
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      margin-bottom: 1.25rem;
+    }
+    .chef-section__body {
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .chef-section__body:last-child {
+      margin-bottom: 0;
+    }
+
+    .gallery {
+      background: var(--bg);
+    }
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @media (min-width: 640px) {
+      .gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .gallery__item {
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .gallery__item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    .gallery__item:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Ember & Ash</a>
+      <ul class="nav__links">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="location.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="page-hero__content">
+      <h1 class="page-hero__title">Our Story</h1>
+      <p class="page-hero__subtitle">Born from flame, rooted in the Pacific Northwest</p>
+    </div>
+  </section>
+
+  <section class="section philosophy">
+    <div class="philosophy__grid">
+      <div class="philosophy__text">
+        <h2 class="section__title">Born from Flame</h2>
+        <p class="philosophy__body">
+          Fire is the oldest kitchen. At Ember & Ash, we honor that lineage with every plate that leaves our hearth. Our cooks work in quiet choreography around a custom-built open fire&mdash;feeding logs, turning spits, reading the embers the way a sailor reads the sky. There is no thermostat, no timer that beeps. There is only instinct, passed down and sharpened over years.
+        </p>
+        <p class="philosophy__body">
+          We source from farms and foragers within a hundred-mile radius, letting the Pacific Northwest dictate the rhythm of our menu. Ingredients arrive whole and are transformed by smoke, flame, and restraint. A carrot pulled from winter soil meets its match in hazelnut ash. A ribeye dry-aged forty-five days finds its resolution over white-hot coals. This is not food that hides. It is food that remembers where it came from.
+        </p>
+        <p class="philosophy__body">
+          Chef Maria Vasquez opened the doors of Ember & Ash in the spring of 2019, after a decade cooking in the world&rsquo;s most demanding kitchens&mdash;from the wood-fired hearths of Noma to the precise pass of Le Bernardin. But the Pacific Northwest never let her go. She returned to Portland with a singular vision: a restaurant where fire is not just a cooking method but a philosophy. A place where the smoke in the air carries the scent of the forest, and every plate tells the story of the land it came from.
+        </p>
+        <p class="philosophy__body">
+          The space itself reflects that vision. Exposed timber, warm plaster, and a long oak counter wrap around the open hearth. The dining room hums with the crackle of the fire and the low murmur of guests sharing something honest. There is no music playing overhead. The sounds of the kitchen&mdash;the chop of a knife, the hiss of fat hitting coal&mdash;are the only soundtrack we need. Ember & Ash is not a performance. It is a return.
+        </p>
+      </div>
+      <div class="philosophy__image">
+        <div class="image-overlay">
+          <img src="assets/images/interior.webp" alt="Interior of Ember & Ash" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section chef-section">
+    <div class="chef-section__grid">
+      <div class="chef-section__image">
+        <div class="image-overlay">
+          <img src="assets/images/chef.webp" alt="Chef Maria Vasquez" loading="lazy">
+        </div>
+      </div>
+      <div class="chef-section__text">
+        <h2 class="section__title">The Chef</h2>
+        <p class="chef-section__name">Maria Vasquez</p>
+        <p class="chef-section__title">Chef &amp; Founder</p>
+        <p class="chef-section__body">
+          Maria Vasquez grew up in the Columbia River Gorge, where her grandmother cooked over an open fire in a cast-iron skillet that had been in the family for three generations. That skillet now hangs above the hearth at Ember & Ash. After training at the Culinary Institute of America, Maria cooked her way through some of the world&rsquo;s most revered restaurants&mdash;including Noma in Copenhagen, where she worked the fire pit, and Le Bernardin in New York, where she refined her precision.
+        </p>
+        <p class="chef-section__body">
+          &ldquo;I learned that fire is not a tool you control,&rdquo; she says. &ldquo;It&rsquo;s a collaborator. You learn to read it, to listen to it, to know when to feed it and when to let it breathe. That&rsquo;s what I wanted to bring back home.&rdquo; Maria was named one of Food &amp; Wine&rsquo;s Best New Chefs in 2022 and has been featured in Bon App&eacute;tit, The New York Times, and World of Fine Dining.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery">
+    <div class="section__container">
+      <h2 class="section__title section__title--centered">The Restaurant</h2>
+      <p class="section__subtitle">A look inside the hearth</p>
+      <div class="gallery__grid">
+        <div class="gallery__item">
+          <img src="assets/images/interior.webp" alt="Dining room interior" loading="lazy">
+        </div>
+        <div class="gallery__item">
+          <img src="assets/images/hero.webp" alt="The hearth at work" loading="lazy">
+        </div>
+        <div class="gallery__item">
+          <img src="assets/images/dish.webp" alt="A finished dish" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2026 Ember &amp; Ash. All rights reserved.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

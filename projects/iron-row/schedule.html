@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Schedule — Iron Row Boxing Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">IRON ROW</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" style="min-height: 40vh; background: url('assets/images/gym.webp') center / cover no-repeat;">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">CLASS SCHEDULE</h1>
+      <p class="hero__tagline">Find your time. Find your fight.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filters" id="scheduleFilters">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="morning">Morning</button>
+        <button class="filter-btn" data-filter="evening">Evening</button>
+        <button class="filter-btn" data-filter="weekend">Weekend</button>
+      </div>
+      <div class="schedule" id="schedule">
+        <div class="schedule__header">Mon</div>
+        <div class="schedule__header">Tue</div>
+        <div class="schedule__header">Wed</div>
+        <div class="schedule__header">Thu</div>
+        <div class="schedule__header">Fri</div>
+        <div class="schedule__header">Sat</div>
+        <div class="schedule__header">Sun</div>
+
+        <div class="schedule__cell" data-day="mon" data-time="morning">6AM Shadow Boxing</div>
+        <div class="schedule__cell" data-day="tue" data-time="morning">6AM Footwork</div>
+        <div class="schedule__cell" data-day="wed" data-time="morning">6AM Shadow Boxing</div>
+        <div class="schedule__cell" data-day="thu" data-time="morning">6AM Footwork</div>
+        <div class="schedule__cell" data-day="fri" data-time="morning">6AM Shadow Boxing</div>
+        <div class="schedule__cell" data-day="sat" data-time="weekend">9AM Bag Work</div>
+        <div class="schedule__cell schedule__cell--closed">Closed</div>
+
+        <div class="schedule__cell" data-day="mon" data-time="morning">7AM Heavy Bag</div>
+        <div class="schedule__cell" data-day="tue" data-time="morning">7AM Speed Bag</div>
+        <div class="schedule__cell" data-day="wed" data-time="morning">7AM Heavy Bag</div>
+        <div class="schedule__cell" data-day="thu" data-time="morning">7AM Speed Bag</div>
+        <div class="schedule__cell" data-day="fri" data-time="morning">7AM Heavy Bag</div>
+        <div class="schedule__cell" data-day="sat" data-time="weekend">10AM Technique</div>
+        <div class="schedule__cell"></div>
+
+        <div class="schedule__cell" data-day="mon" data-time="morning">12PM Technique</div>
+        <div class="schedule__cell" data-day="tue" data-time="morning">12PM Core</div>
+        <div class="schedule__cell" data-day="wed" data-time="morning">12PM Technique</div>
+        <div class="schedule__cell" data-day="thu" data-time="morning">12PM Core</div>
+        <div class="schedule__cell" data-day="fri" data-time="morning">12PM Open Gym</div>
+        <div class="schedule__cell" data-day="sat" data-time="weekend">11AM HIIT</div>
+        <div class="schedule__cell"></div>
+
+        <div class="schedule__cell" data-day="mon" data-time="evening">5PM Sparring</div>
+        <div class="schedule__cell" data-day="tue" data-time="evening">5PM Pad Work</div>
+        <div class="schedule__cell" data-day="wed" data-time="evening">5PM Sparring</div>
+        <div class="schedule__cell" data-day="thu" data-time="evening">5PM Pad Work</div>
+        <div class="schedule__cell" data-day="fri" data-time="evening">5PM Sparring</div>
+        <div class="schedule__cell"></div>
+        <div class="schedule__cell"></div>
+
+        <div class="schedule__cell" data-day="mon" data-time="evening">6PM HIIT</div>
+        <div class="schedule__cell" data-day="tue" data-time="evening">6PM Strength</div>
+        <div class="schedule__cell" data-day="wed" data-time="evening">6PM HIIT</div>
+        <div class="schedule__cell" data-day="thu" data-time="evening">6PM Strength</div>
+        <div class="schedule__cell"></div>
+        <div class="schedule__cell"></div>
+        <div class="schedule__cell"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <h2 class="section__title">CLASS TYPES</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div style="border: 2px solid var(--red); padding: 1.5rem; background: var(--black);">
+          <h3 style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; color: var(--red); font-size: 1.5rem;">Shadow Boxing</h3>
+          <p style="color: var(--grey); margin-top: 0.5rem;">Perfect your form and footwork without a partner. Build muscle memory and conditioning.</p>
+        </div>
+        <div style="border: 2px solid var(--red); padding: 1.5rem; background: var(--black);">
+          <h3 style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; color: var(--red); font-size: 1.5rem;">Heavy Bag</h3>
+          <p style="color: var(--grey); margin-top: 0.5rem;">Develop power and endurance on the bag. Focus on combinations, timing, and rotational force.</p>
+        </div>
+        <div style="border: 2px solid var(--red); padding: 1.5rem; background: var(--black);">
+          <h3 style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; color: var(--red); font-size: 1.5rem;">Sparring</h3>
+          <p style="color: var(--grey); margin-top: 0.5rem;">Controlled live rounds with coaching oversight. Gear required. All experience levels welcome.</p>
+        </div>
+        <div style="border: 2px solid var(--red); padding: 1.5rem; background: var(--black);">
+          <h3 style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; color: var(--red); font-size: 1.5rem;">Pad Work</h3>
+          <p style="color: var(--grey); margin-top: 0.5rem;">One-on-one mitt drills to sharpen accuracy, speed, and defensive reactions with a coach.</p>
+        </div>
+        <div style="border: 2px solid var(--red); padding: 1.5rem; background: var(--black);">
+          <h3 style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; color: var(--red); font-size: 1.5rem;">HIIT / Strength</h3>
+          <p style="color: var(--grey); margin-top: 0.5rem;">High-intensity conditioning and functional strength training built for combat athletes.</p>
+        </div>
+        <div style="border: 2px solid var(--red); padding: 1.5rem; background: var(--black);">
+          <h3 style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; color: var(--red); font-size: 1.5rem;">Open Gym</h3>
+          <p style="color: var(--grey); margin-top: 0.5rem;">Unstructured training time. Bags, rings, and equipment available. Coaches on site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">IRON ROW</span>
+          <p class="footer__tag">Hit Hard. Train Harder.</p>
+        </div>
+        <div class="footer__info">
+          <p>123 Combat Ave, Chicago, IL 60607</p>
+          <p>(312) 555‑0187</p>
+          <p>Mon–Fri: 5AM – 10PM | Sat: 7AM – 8PM | Sun: Closed</p>
+        </div>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Twitter">X / Twitter</a>
+        </div>
+      </div>
+      <p class="footer__copy">&copy; 2026 Iron Row Boxing Gym. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

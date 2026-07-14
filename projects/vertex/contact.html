@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Vertex</title>
+  <meta name="description" content="Get in touch with Vertex for project inquiries, quotes, or general questions. Offices in Toronto, Vancouver, and Calgary.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Vertex<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="assets/images/building.webp" alt="Vertex office building" loading="eager">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></p>
+      <h1>Get in Touch</h1>
+      <p class="section-subtitle">Ready to start your next project? Let's talk.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div>
+          <p class="section-label">Get a Quote</p>
+          <h2 class="section-title" style="margin-bottom:32px">Tell Us About Your Project</h2>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="project-type">Project Type</label>
+              <select id="project-type" name="project-type">
+                <option value="">Select a project type</option>
+                <option value="residential">Residential Development</option>
+                <option value="commercial">Commercial Construction</option>
+                <option value="renovation">Renovation &amp; Restoration</option>
+                <option value="management">Project Management</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Describe your project, timeline, budget, and any specific requirements..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="justify-content:center">Send Inquiry &rarr;</button>
+          </form>
+        </div>
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Our Offices</h2>
+          <div class="info-item">
+            <span class="info-icon">&#x1F3E2;</span>
+            <div>
+              <h4>Toronto — Headquarters</h4>
+              <p>200 King Street West, Suite 1500<br>Toronto, ON M5V 3M6</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#x1F3E2;</span>
+            <div>
+              <h4>Vancouver Office</h4>
+              <p>1050 West Pender Street, Suite 800<br>Vancouver, BC V6E 4J3</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#x1F3E2;</span>
+            <div>
+              <h4>Calgary Office</h4>
+              <p>700 2nd Street SW, Suite 400<br>Calgary, AB T2P 2W2</p>
+            </div>
+          </div>
+          <hr style="border:none;border-top:1px solid var(--color-gray-200);margin:32px 0">
+          <div class="info-item">
+            <span class="info-icon">&#x1F4DE;</span>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (416) 555-0198</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#x2709;&#xFE0F;</span>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:info@vertexdev.com">info@vertexdev.com</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#x1F552;</span>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday – Friday: 8:00 AM – 6:00 PM<br>Saturday: By appointment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Vertex<span>.</span></a>
+          <p>For over two decades, Vertex has been at the forefront of construction and development — shaping skylines and communities with integrity, innovation, and craftsmanship.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Residential</a></li>
+            <li><a href="services.html">Commercial</a></li>
+            <li><a href="services.html">Renovations</a></li>
+            <li><a href="services.html">Project Mgmt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact">
+            <p>200 King Street West<br>Toronto, ON M5V 3M6</p>
+            <p>+1 (416) 555-0198</p>
+            <p>info@vertexdev.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Vertex Development Corp. All rights reserved.</span>
+        <span>Built with purpose.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

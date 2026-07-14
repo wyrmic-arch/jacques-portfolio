@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Row — Case Study | Jacques du Plessis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">JD</a>
+    <div class="nav-links">
+      <a href="../index.html#projects" class="nav-link">Work</a>
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <section class="case-hero">
+    <a href="../index.html#projects" class="case-back">← Back to Work</a>
+    <p class="case-category">Boxing Gym</p>
+    <h1 class="case-title">Iron Row</h1>
+  </section>
+
+  <div class="live-preview" id="livePreview">
+    <div class="cover-state" id="coverState">
+      <img src="../projects/iron-row/assets/images/hero.webp" alt="Iron Row boxing gym">
+      <span class="cover-state-label">Click to preview live site</span>
+    </div>
+    <div class="frame-state" id="frameState">
+      <div class="frame-bar">
+        <div class="frame-dots">
+          <span class="frame-dot frame-dot--red"></span>
+          <span class="frame-dot frame-dot--yellow"></span>
+          <span class="frame-dot frame-dot--green"></span>
+        </div>
+        <div class="frame-address">ironrowchicago.com</div>
+        <div class="frame-actions">
+          <button class="frame-action" id="frameOpen" data-url="../projects/iron-row/index.html" title="Open in new tab">↗</button>
+          <button class="frame-action" id="frameClose" title="Close preview">✕</button>
+        </div>
+      </div>
+      <iframe class="frame-content" src="../projects/iron-row/index.html" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" loading="lazy" title="Iron Row live preview"></iframe>
+    </div>
+  </div>
+
+  <div class="case-content">
+    <div class="case-section">
+      <h2 class="case-section-label">What It Is</h2>
+      <p>Iron Row is a multi-page marketing website for a fictional boxing and combat sports gym based in Chicago, IL. The site presents the gym as a gritty, no-nonsense training facility for everyone from first-timers to serious amateur fighters. It spans eight pages: a high-energy homepage with an animated punch counter, a filterable class schedule, detailed trainer profiles with individual bio pages, a three-tier membership calculator, and a testimonials carousel.</p>
+      <p>The visual language is aggressive and industrial — near-black backgrounds, bold red accents, all-caps Bebas Neue typography, desaturated trainer photography with multiply overlays. The entire aesthetic draws from fight posters and boxing gym interiors: raw, loud, and authoritative.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Why It Was Made</h2>
+      <p>A combat sports gym needs to attract members in a competitive fitness market. The brief demanded a site that could do four things simultaneously: establish an immediate, aggressive brand identity; lower the barrier to entry for beginners (free trial, no contract); showcase credibility through detailed trainer credentials and real stats; and convert visitors into paying members through an interactive pricing tool.</p>
+      <p>The solution was a dark, cinematic hero with a live animated counter showing current gym membership — a subtle social-proof mechanism. Every page funnels toward action: "Start Your Free Week," "Book a Session," "Join Now." Trainer bios include amateur records and personality quotes to build trust. The membership calculator lets prospects build their own plan with add-ons and see the total update in real time.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Who It Was Made For</h2>
+      <p>The target audience splits into three overlapping personas: the curious beginner who has never boxed but wants to get in shape (attracted by "No contract. No pressure." and the free trial); the weekend warrior who cross-trains and wants flexible hours, structured classes, and credible coaching; and the aspiring fighter looking for legit sparring, fight team access, and trainers with real records (14-0, Golden Gloves).</p>
+      <p>Geographically the site targets the Chicago metro area, with hours optimized for early-morning and after-work training crowds (5AM–10PM weekdays). The pricing tiers ($49/$89/$149) accommodate all three personas, from basic open-gym access to full elite membership with personal training and meal plans.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-item-name">HTML5</div>
+          <div class="tech-item-desc">Semantic, 8 pages</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS3</div>
+          <div class="tech-item-desc">Custom properties, mix-blend-mode</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Vanilla JS</div>
+          <div class="tech-item-desc">Animated counter, schedule filter, calculator</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Google Fonts</div>
+          <div class="tech-item-desc">Bebas Neue + Inter</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">WebP + JPEG</div>
+          <div class="tech-item-desc">Image fallback pairs</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">BEM CSS</div>
+          <div class="tech-item-desc">Maintainable naming convention</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS Grid</div>
+          <div class="tech-item-desc">Schedule, trainer cards, pricing</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Zero Frameworks</div>
+          <div class="tech-item-desc">No build step, pure static</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-footer">
+    <a href="../index.html#projects" class="case-footer-link">← Back to Work</a>
+    <a href="../projects/iron-row/index.html" class="case-footer-link" target="_blank">View Live →</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script>initPreview('iron-row');</script>
+</body>
+</html>

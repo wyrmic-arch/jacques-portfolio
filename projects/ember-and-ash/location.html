@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location &amp; Contact — Ember & Ash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      position: relative;
+      height: 40vh;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .page-hero__bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/interior.webp') center / cover no-repeat;
+      z-index: 0;
+    }
+    .page-hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26, 20, 16, 0.4) 0%, rgba(26, 20, 16, 0.75) 60%, var(--bg) 100%);
+      z-index: 1;
+    }
+    .page-hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 1.5rem;
+    }
+    .page-hero__title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--text);
+    }
+    .page-hero__subtitle {
+      font-family: var(--font-sans);
+      font-size: clamp(0.75rem, 1.2vw, 0.9375rem);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form .reservation__field {
+      margin-bottom: 1.25rem;
+    }
+    .contact-form .btn {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    .contact-form .contact-success {
+      display: none;
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      color: var(--amber-light);
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .contact-form .contact-success.visible {
+      display: block;
+    }
+
+    .neighborhood {
+      background: var(--bg-light);
+    }
+    .neighborhood__text {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Ember & Ash</a>
+      <ul class="nav__links">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="location.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="page-hero__content">
+      <h1 class="page-hero__title">Visit Us</h1>
+      <p class="page-hero__subtitle">Located in the heart of Portland&rsquo;s Richmond neighborhood</p>
+    </div>
+  </section>
+
+  <section class="section location" id="location">
+    <div class="section__container location__grid">
+      <div class="location__info">
+        <h2 class="section__title">Ember &amp; Ash</h2>
+        <address class="location__address">
+          64 Ash Street<br>
+          Portland, OR 97202
+        </address>
+        <p class="location__contact">
+          <a href="tel:+15035550123">(503) 555-0123</a><br>
+          <a href="mailto:hello@emberandash.com">hello@emberandash.com</a>
+        </p>
+      </div>
+      <div class="location__hours">
+        <table class="hours-table">
+          <tr><th>Monday</th><td class="hours-table__closed">Closed</td></tr>
+          <tr><th>Tuesday</th><td>5:00 – 10:00 PM</td></tr>
+          <tr><th>Wednesday</th><td>5:00 – 10:00 PM</td></tr>
+          <tr><th>Thursday</th><td>5:00 – 10:00 PM</td></tr>
+          <tr><th>Friday</th><td>5:00 – 11:00 PM</td></tr>
+          <tr><th>Saturday</th><td>5:00 – 11:00 PM</td></tr>
+          <tr><th>Sunday</th><td>5:00 – 9:00 PM</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section neighborhood">
+    <div class="section__container">
+      <h2 class="section__title section__title--centered">The Neighborhood</h2>
+      <p class="neighborhood__text">
+        Ember & Ash sits on a quiet stretch of Ash Street in Portland&rsquo;s Richmond neighborhood, a pocket of the city where craft coffee shops, independent bookstores, and century-old elms line the blocks. We are a short walk from the Hawthorne Bridge and within easy reach of Division Street&rsquo;s restaurant row. Street parking is available, and we encourage bikes&mdash;there is a rack just outside the door. Come as you are. Leave when the embers die down.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__container">
+      <h2 class="section__title section__title--centered">Get in Touch</h2>
+      <p class="section__subtitle">We&rsquo;d love to hear from you</p>
+      <form class="reservation__form contact-form" id="contactForm" novalidate>
+        <div class="reservation__row">
+          <div class="reservation__field">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" placeholder="Your name" required>
+          </div>
+          <div class="reservation__field">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="reservation__field">
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" rows="4" placeholder="Tell us what&rsquo;s on your mind…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Send Message</button>
+        <p class="contact-success" id="contactSuccess">Thank you for your message. We&rsquo;ll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2026 Ember &amp; Ash. All rights reserved.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('contactForm');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('contactName').value.trim();
+        var email = document.getElementById('contactEmail').value.trim();
+        var message = document.getElementById('contactMessage').value.trim();
+        if (!name || !email || !message) return;
+        document.getElementById('contactSuccess').classList.add('visible');
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drift — Case Study | Jacques du Plessis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">JD</a>
+    <div class="nav-links">
+      <a href="../index.html#projects" class="nav-link">Work</a>
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <section class="case-hero">
+    <a href="../index.html#projects" class="case-back">← Back to Work</a>
+    <p class="case-category">Boutique Coastal Retreat</p>
+    <h1 class="case-title">Drift</h1>
+  </section>
+
+  <div class="live-preview" id="livePreview">
+    <div class="cover-state" id="coverState">
+      <img src="../projects/drift/assets/images/hero.webp" alt="Drift coastal retreat hero image">
+      <span class="cover-state-label">Click to preview live site</span>
+    </div>
+    <div class="frame-state" id="frameState">
+      <div class="frame-bar">
+        <div class="frame-dots">
+          <span class="frame-dot frame-dot--red"></span>
+          <span class="frame-dot frame-dot--yellow"></span>
+          <span class="frame-dot frame-dot--green"></span>
+        </div>
+        <div class="frame-address">drift-luxury-retreat.com</div>
+        <div class="frame-actions">
+          <button class="frame-action" id="frameOpen" data-url="../projects/drift/index.html" title="Open in new tab">↗</button>
+          <button class="frame-action" id="frameClose" title="Close preview">✕</button>
+        </div>
+      </div>
+      <iframe class="frame-content" src="../projects/drift/index.html" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" loading="lazy" title="Drift live preview"></iframe>
+    </div>
+  </div>
+
+  <div class="case-content">
+    <div class="case-section">
+      <h2 class="case-section-label">What It Is</h2>
+      <p>Drift is a fully responsive, five-page brand website for a fictional luxury boutique coastal resort located on the Big Sur coastline in California. The site establishes a complete digital presence for a high-end hospitality brand, spanning a dramatic full-viewport homepage, an accommodations page with detailed room tiers, an experiences/activities page, an about page with brand philosophy, and a contact page with an inquiry form.</p>
+      <p>The design takes a serene, warm approach — cream backgrounds, sand-toned borders, a deep navy for dark sections, and a terracotta accent that evokes sun-baked cliffs. The typography pairs Cormorant Garamond (serif, editorial elegance) with Inter (sans-serif, modern readability). Every page builds a consistent story of exclusivity, sustainability, and personal service.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Why It Was Made</h2>
+      <p>The project was created to establish a premium digital identity for a new boutique hospitality concept from the ground up. The core problem: how do you convey serenity, exclusivity, and architectural intention through a website — not just list rooms and rates?</p>
+      <p>The brief demanded a site that could tell a story: Drift is sustainably minded (solar-powered, locally sourced, plastic-free), architecturally intentional (only 12 keys, 2:1 guest-to-staff ratio), and deeply personal. Every design choice — from the warm coastal palette to the glassmorphism navigation — was calibrated to make visitors feel the tranquility of the property before they arrive.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Who It Was Made For</h2>
+      <p>The primary audience is the affluent escape-seeker: aged 35–65, with high disposable income ($550–$1,800+/night), who values privacy, sustainability, and authentic experiences over flashy amenities. This persona is likely a couple or solo traveler looking for a digital detox — interested in wellness (yoga, spa), nature (surfing, hiking), and farm-to-table cuisine.</p>
+      <p>A secondary audience is luxury travel planners and concierges looking for curated partner properties. The site needed to communicate clear room differentiation, pricing hierarchy, and easy booking pathways — all while maintaining a tone of unhurried luxury.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-item-name">HTML5</div>
+          <div class="tech-item-desc">Semantic markup</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS3</div>
+          <div class="tech-item-desc">Custom properties, Grid, Flexbox</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Vanilla JS</div>
+          <div class="tech-item-desc">Scroll-driven nav, mobile menu</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Google Fonts</div>
+          <div class="tech-item-desc">Cormorant Garamond + Inter</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">WebP</div>
+          <div class="tech-item-desc">Optimized imagery</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS Grid</div>
+          <div class="tech-item-desc">Responsive card layouts</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Inline SVGs</div>
+          <div class="tech-item-desc">No icon library</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Zero Frameworks</div>
+          <div class="tech-item-desc">No build step, no dependencies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-footer">
+    <a href="../index.html#projects" class="case-footer-link">← Back to Work</a>
+    <a href="../projects/drift/index.html" class="case-footer-link" target="_blank">View Live →</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script>initPreview('drift');</script>
+</body>
+</html>

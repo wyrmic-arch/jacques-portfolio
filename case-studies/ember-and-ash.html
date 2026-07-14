@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ember & Ash — Case Study | Jacques du Plessis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">JD</a>
+    <div class="nav-links">
+      <a href="../index.html#projects" class="nav-link">Work</a>
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <section class="case-hero">
+    <a href="../index.html#projects" class="case-back">← Back to Work</a>
+    <p class="case-category">Fine Dining Restaurant</p>
+    <h1 class="case-title">Ember &amp; Ash</h1>
+  </section>
+
+  <div class="live-preview" id="livePreview">
+    <div class="cover-state" id="coverState">
+      <img src="../projects/ember-and-ash/assets/images/hero.webp" alt="Ember & Ash restaurant interior">
+      <span class="cover-state-label">Click to preview live site</span>
+    </div>
+    <div class="frame-state" id="frameState">
+      <div class="frame-bar">
+        <div class="frame-dots">
+          <span class="frame-dot frame-dot--red"></span>
+          <span class="frame-dot frame-dot--yellow"></span>
+          <span class="frame-dot frame-dot--green"></span>
+        </div>
+        <div class="frame-address">emberandashpdx.com</div>
+        <div class="frame-actions">
+          <button class="frame-action" id="frameOpen" data-url="../projects/ember-and-ash/index.html" title="Open in new tab">↗</button>
+          <button class="frame-action" id="frameClose" title="Close preview">✕</button>
+        </div>
+      </div>
+      <iframe class="frame-content" src="../projects/ember-and-ash/index.html" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" loading="lazy" title="Ember & Ash live preview"></iframe>
+    </div>
+  </div>
+
+  <div class="case-content">
+    <div class="case-section">
+      <h2 class="case-section-label">What It Is</h2>
+      <p>Ember & Ash is a five-page brand website for a fictional fine-dining restaurant in Portland, Oregon's Richmond neighborhood. The restaurant concept centers on open-fire cooking — a "hearth-to-table" philosophy that treats flame as a collaborator rather than a tool. The tagline — "Fire. Smoke. Everything in Between." — telegraphs the elemental, stripped-back ethos.</p>
+      <p>The site includes a full-viewport hero with parallax, a categorized menu with click-to-expand item modals showing wine and cocktail pairings, a story page with chef bio and gallery, a reservation form, and a location page with hours and contact details. The design is deliberately dark, warm, and textural — deep brown backgrounds, amber accents, serif typography — to evoke the gravity and intimacy of dining by an open fire.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Why It Was Made</h2>
+      <p>The challenge: how do you translate the visceral sensory experience of a wood-fired hearth restaurant — the crackle of logs, the smell of smoke, the dim amber light — into a digital interface that feels equally intentional and atmospheric?</p>
+      <p>A high-end independent restaurant needs to convey a strong, cohesive identity before a guest ever walks through the door. Generic template sites fail to communicate the atmosphere, philosophy, and craft that differentiate a premier dining experience. This site was built to perform the brand rather than merely describe it — using a moody dark palette, subtle parallax motion, scroll-reveal animations, and image overlays with mix-blend-mode to consistently tint photography with the brand's amber warmth.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Who It Was Made For</h2>
+      <p>The primary audience is food-minded diners in Portland — locals and visitors — who seek intentional, chef-driven dining experiences. These are people who value farm-to-table sourcing and seasonal cooking, appreciate craft cocktails and wine pairings, and are comfortable spending $60+ per person for a special occasion.</p>
+      <p>The persona: someone who follows Bon Appétit and Food &amp; Wine, who picks restaurants based on design aesthetic and stated philosophy as much as the menu, and who browses on mobile during a commute and later books a birthday dinner on desktop. The site also serves the restaurant's own staff as a digital storefront that reduces incoming phone calls by handling reservations and inquiries self-serve.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-item-name">HTML5</div>
+          <div class="tech-item-desc">Semantic, lazy loading</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS3</div>
+          <div class="tech-item-desc">Custom properties, Grid, Flexbox</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Vanilla JS</div>
+          <div class="tech-item-desc">IntersectionObserver, parallax, modals</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Google Fonts</div>
+          <div class="tech-item-desc">Playfair Display + Inter</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">WebP + JPEG</div>
+          <div class="tech-item-desc">Dual-format fallbacks</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">mix-blend-mode</div>
+          <div class="tech-item-desc">Branded image overlays</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS Animations</div>
+          <div class="tech-item-desc">Scroll-reveal, hover effects</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Zero Dependencies</div>
+          <div class="tech-item-desc">No jQuery, no frameworks</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-footer">
+    <a href="../index.html#projects" class="case-footer-link">← Back to Work</a>
+    <a href="../projects/ember-and-ash/index.html" class="case-footer-link" target="_blank">View Live →</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script>initPreview('ember-and-ash');</script>
+</body>
+</html>

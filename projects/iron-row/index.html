@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Row Boxing Gym — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">IRON ROW</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">FIND YOUR FIGHT.</h1>
+      <p class="hero__tagline">Train like a contender. Every day.</p>
+      <a href="pricing.html" class="btn btn--hero">Start Your Free Week</a>
+      <div class="hero__counter">
+        <span class="hero__counter-label">PUNCHES THROWN TODAY:</span>
+        <span class="hero__counter-num" id="punchCounter">0</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <h2 class="section__title">WHAT THEY SAY</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <div class="testimonial">
+          <p class="testimonial__text">"Lost 30 lbs and found my confidence. This gym changed my life."</p>
+          <span class="testimonial__author">– Marcus T.</span>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">"Best decision I ever made was walking through those doors."</p>
+          <span class="testimonial__author">– Carlos R.</span>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">"The community at Iron Row pushed me harder than I ever pushed myself."</p>
+          <span class="testimonial__author">– Dani P.</span>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="testimonials.html" class="btn">View All Testimonials</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <h2 class="section__title">START YOUR FREE WEEK</h2>
+      <p style="color: var(--grey); font-size: 1.125rem; margin-bottom: 1.5rem;">No contract. No pressure. Just seven days of real training.</p>
+      <a href="pricing.html" class="btn">Claim Your Free Week</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">IRON ROW</span>
+          <p class="footer__tag">Hit Hard. Train Harder.</p>
+        </div>
+        <div class="footer__info">
+          <p>123 Combat Ave, Chicago, IL 60607</p>
+          <p>(312) 555‑0187</p>
+          <p>Mon–Fri: 5AM – 10PM | Sat: 7AM – 8PM | Sun: Closed</p>
+        </div>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Twitter">X / Twitter</a>
+        </div>
+      </div>
+      <p class="footer__copy">&copy; 2026 Iron Row Boxing Gym. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

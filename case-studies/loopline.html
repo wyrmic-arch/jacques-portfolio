@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loopline — Case Study | Jacques du Plessis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">JD</a>
+    <div class="nav-links">
+      <a href="../index.html#projects" class="nav-link">Work</a>
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <section class="case-hero">
+    <a href="../index.html#projects" class="case-back">← Back to Work</a>
+    <p class="case-category">Productivity SaaS</p>
+    <h1 class="case-title">Loopline</h1>
+  </section>
+
+  <div class="live-preview" id="livePreview">
+    <div class="cover-state" id="coverState">
+      <img src="../projects/loopline/assets/images/working.webp" alt="Loopline productivity platform">
+      <span class="cover-state-label">Click to preview live site</span>
+    </div>
+    <div class="frame-state" id="frameState">
+      <div class="frame-bar">
+        <div class="frame-dots">
+          <span class="frame-dot frame-dot--red"></span>
+          <span class="frame-dot frame-dot--yellow"></span>
+          <span class="frame-dot frame-dot--green"></span>
+        </div>
+        <div class="frame-address">loopline.io</div>
+        <div class="frame-actions">
+          <button class="frame-action" id="frameOpen" data-url="../projects/loopline/index.html" title="Open in new tab">↗</button>
+          <button class="frame-action" id="frameClose" title="Close preview">✕</button>
+        </div>
+      </div>
+      <iframe class="frame-content" src="../projects/loopline/index.html" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" loading="lazy" title="Loopline live preview"></iframe>
+    </div>
+  </div>
+
+  <div class="case-content">
+    <div class="case-section">
+      <h2 class="case-section-label">What It Is</h2>
+      <p>Loopline is a complete marketing website for a SaaS productivity and project-management platform. The brand positions itself as an "intelligent workspace" that unifies tasks, documents, and third-party tools into a single interface — the tagline reads "Work flows like it should."</p>
+      <p>The site spans five pages: a hero-driven homepage featuring an animated Kanban board mockup built entirely in HTML/CSS (no screenshot, no video — a live interactive demo), a detailed features catalog covering six core capabilities, a three-tier pricing page with monthly/annual toggle and full comparison table, an FAQ accordion section, and an about page with brand story and values. The aesthetic is dark-mode-first with a blue-violet gradient accent palette, reminiscent of modern developer tools like Linear and Vercel.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Why It Was Made</h2>
+      <p>The core problem Loopline addresses is context-switching friction: teams using Jira for tickets, Notion for docs, Slack for communication, Figma for design — each with its own login, notifications, and workflow. The brief was to create a unified workspace that eliminates the need to jump between a dozen different applications.</p>
+      <p>The marketing site needed to communicate this value proposition instantly. The hero features a live, animated Kanban board that cycles cards every three seconds — a subtle but powerful demo that shows rather than tells. The pricing page includes a real toggle with calculated annual savings and a side-by-side comparison table. Every page is designed to reduce friction for adoption: clear CTAs, detailed feature documentation, and trust signals (SOC 2 compliance, AES-256 encryption, 99.99% SLA).</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Who It Was Made For</h2>
+      <p>The site targets technology and software product teams — specifically engineering managers frustrated by tool sprawl who want a single source of truth for tasks, docs, and timelines; startup founders and small business owners looking for an affordable all-in-one solution (free Starter plan, $29/mo Pro); and operations/IT decision-makers at larger organizations needing SSO, audit logs, and dedicated support ($99/mo Enterprise).</p>
+      <p>The design language and integrations (GitHub, GitLab, Figma, Linear, Slack) clearly signal a tech-forward audience of 2 to 200+ person teams. The FAQ section addresses specific objections: free plan limits, security certifications, data retention policies, and nonprofit discounts.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-label">Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-item-name">HTML5</div>
+          <div class="tech-item-desc">5 pages, semantic</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS3</div>
+          <div class="tech-item-desc">Custom properties, grid patterns</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Vanilla JS</div>
+          <div class="tech-item-desc">IntersectionObserver, Kanban animation, pricing toggle</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Google Fonts</div>
+          <div class="tech-item-desc">Inter (all weights)</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">CSS Grid</div>
+          <div class="tech-item-desc">Responsive layout system</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Inline SVGs</div>
+          <div class="tech-item-desc">Favicon, icons</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Live Mockup</div>
+          <div class="tech-item-desc">Kanban board in pure HTML/CSS/JS</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-name">Zero Dependencies</div>
+          <div class="tech-item-desc">No React, no bundler, no jQuery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-footer">
+    <a href="../index.html#projects" class="case-footer-link">← Back to Work</a>
+    <a href="../projects/loopline/index.html" class="case-footer-link" target="_blank">View Live →</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script>initPreview('loopline');</script>
+</body>
+</html>

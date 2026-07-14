@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features — Loopline</title>
+  <meta name="description" content="Explore all Loopline features: Kanban boards, timeline view, team docs, automations, integrations, and analytics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233b82f6'/><text x='16' y='22' text-anchor='middle' font-size='20' font-weight='800' fill='white'>L</text></svg>">
+</head>
+<body>
+
+  <!-- ═══ Nav ═══ -->
+  <nav class="nav" role="navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><span>⌘</span> Loopline</a>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html" style="color:var(--text);">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ Header ═══ -->
+  <section class="section" style="padding: 140px 0 60px; text-align: center; background-image: linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px); background-size: 60px 60px; position: relative;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% -20%, rgba(59, 130, 246, 0.08), transparent 60%); pointer-events: none;"></div>
+    <div class="container" style="position: relative;">
+      <span class="section-label">Features</span>
+      <h1 class="section-title">Everything you need, nothing you don't.</h1>
+      <p class="section-sub" style="margin: 0 auto;">Loopline brings together the tools your team already loves, with powerful features built from the ground up.</p>
+    </div>
+  </section>
+
+  <!-- ═══ Feature Cards ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Kanban Boards</h3>
+          <p>Drag-and-drop task management with customizable columns, swimlanes, and WIP limits that keep your team moving.</p>
+          <ul style="list-style:none;margin-top:14px;padding:0;">
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Customizable columns, swimlanes, and WIP limits</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Drag-and-drop reordering and card templates</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Bulk actions for fast workflow management</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Timeline View</h3>
+          <p>Project scheduling made visual. Map out milestones, dependencies, and deadlines on an interactive Gantt-style timeline.</p>
+          <ul style="list-style:none;margin-top:14px;padding:0;">
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Gantt-style scheduling with milestone tracking</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Dependency mapping and critical path analysis</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Resource leveling to balance team workload</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Team Docs</h3>
+          <p>Collaborative living documents with rich embeds, real-time editing, and version history that never loses a word.</p>
+          <ul style="list-style:none;margin-top:14px;padding:0;">
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Real-time collaboration with rich embeds (images, tables, code blocks)</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Version history with comments and suggestions</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Publish docs to the web with one click</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Automations</h3>
+          <p>Repetitive tasks, automated. Build custom triggers and actions to move work forward without manual effort.</p>
+          <ul style="list-style:none;margin-top:14px;padding:0;">
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Trigger-based workflows with custom actions and Slack notifications</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Auto-assignment and due date reminders</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Smart status transitions based on project rules</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔗</div>
+          <h3>Integrations</h3>
+          <p>Connects with your stack — Slack, GitHub, GitLab, Figma, Linear, and 200+ other tools you already use.</p>
+          <ul style="list-style:none;margin-top:14px;padding:0;">
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Slack, GitHub, GitLab, Figma, Linear, Jira, Notion, Asana, Trello</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Google Workspace and Microsoft 365 sync</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> 200+ more integrations via Zapier</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Analytics</h3>
+          <p>Data-driven team insights. Track velocity, cycle time, and burndown with live dashboards you can export.</p>
+          <ul style="list-style:none;margin-top:14px;padding:0;">
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Velocity tracking, cycle time analysis, and burndown charts</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> Workload balancing and custom dashboard builder</li>
+            <li style="font-size:13px;color:var(--text-muted);padding:4px 0;display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">▹</span> CSV and PDF export for reporting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Image Section ═══ -->
+  <section class="section" style="padding: 60px 0 100px; text-align: center;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto;">
+        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);">
+          <img src="assets/images/team.webp" alt="Team collaborating" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);">
+          <img src="assets/images/working.webp" alt="Team working on project" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+      </div>
+      <p style="color:var(--text-muted);font-size:15px;margin-top:24px;">Trusted by teams who ship.</p>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Loopline. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

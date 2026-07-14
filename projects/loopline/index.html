@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loopline — Work flows like it should.</title>
+  <meta name="description" content="Loopline connects your tasks, docs, and tools in one intelligent workspace. No more context switching.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233b82f6'/><text x='16' y='22' text-anchor='middle' font-size='20' font-weight='800' fill='white'>L</text></svg>">
+</head>
+<body>
+
+  <!-- ═══ Nav ═══ -->
+  <nav class="nav" role="navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><span>⌘</span> Loopline</a>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" style="color:var(--text);">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ Hero ═══ -->
+  <section class="hero bg-grid">
+    <a href="pricing.html" class="hero-badge">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="2"/><circle cx="8" cy="8" r=".5" fill="currentColor"/></svg>
+      Now in Public Beta →
+    </a>
+    <h1>Work flows<br>like it <span>should.</span></h1>
+    <p>Loopline connects your tasks, docs, and tools in one intelligent workspace. No more context switching.</p>
+    <div class="hero-buttons">
+      <a href="pricing.html" class="btn btn-primary">Start Free Trial</a>
+      <a href="#" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Watch Demo
+      </a>
+    </div>
+
+    <!-- Dashboard Mockup -->
+    <div class="dashboard-mockup">
+      <div class="dashboard-header">
+        <span class="dashboard-dot"></span>
+        <span class="dashboard-dot"></span>
+        <span class="dashboard-dot"></span>
+      </div>
+      <div class="dashboard-body">
+        <div class="kanban-col" id="kanban-backlog">
+          <div class="kanban-col-title">Backlog <span class="kanban-col-count">5</span></div>
+          <div class="kanban-cards">
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-blue">Design</span>
+              <div class="kanban-card-title">Homepage refresh</div>
+              <div class="kanban-card-desc">Update hero section with new copy</div>
+              <div class="kanban-card-footer">
+                <span>2 subtasks</span>
+                <span>📎 3</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-amber">Research</span>
+              <div class="kanban-card-title">User interviews</div>
+              <div class="kanban-card-desc">Schedule sessions for Q3</div>
+              <div class="kanban-card-footer">
+                <span>Due Aug 14</span>
+                <span>👤 2</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-violet">Dev</span>
+              <div class="kanban-card-title">API rate limiting</div>
+              <div class="kanban-card-desc">Implement per-key rate limits</div>
+              <div class="kanban-card-footer">
+                <span>⬆️ High</span>
+                <span>🐛 1</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-green">Content</span>
+              <div class="kanban-card-title">Blog post: v2.0</div>
+              <div class="kanban-card-desc">Draft announcement post</div>
+              <div class="kanban-card-footer">
+                <span>Due Aug 20</span>
+                <span>📝 1</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-blue">Design</span>
+              <div class="kanban-card-title">Mobile navigation</div>
+              <div class="kanban-card-desc">Redesign mobile nav menu</div>
+              <div class="kanban-card-footer">
+                <span>3 subtasks</span>
+                <span>🎨 2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="kanban-col" id="kanban-progress">
+          <div class="kanban-col-title">In Progress <span class="kanban-col-count">3</span></div>
+          <div class="kanban-cards">
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-violet">Dev</span>
+              <div class="kanban-card-title">Dark mode support</div>
+              <div class="kanban-card-desc">CSS variables and theme toggle</div>
+              <div class="kanban-card-footer">
+                <span>⬆️ High</span>
+                <span>🔧 3</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-blue">Design</span>
+              <div class="kanban-card-title">Dashboard widgets</div>
+              <div class="kanban-card-desc">Design analytics widgets</div>
+              <div class="kanban-card-footer">
+                <span>Due Aug 12</span>
+                <span>🎨 1</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-amber">Research</span>
+              <div class="kanban-card-title">Competitor audit</div>
+              <div class="kanban-card-desc">Analyze top 5 competitors</div>
+              <div class="kanban-card-footer">
+                <span>⬇️ Medium</span>
+                <span>📊 2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="kanban-col" id="kanban-done">
+          <div class="kanban-col-title">Done <span class="kanban-col-count">2</span></div>
+          <div class="kanban-cards">
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-green">Content</span>
+              <div class="kanban-card-title">Onboarding copy</div>
+              <div class="kanban-card-desc">Write welcome emails and tooltips</div>
+              <div class="kanban-card-footer">
+                <span>✅ Approved</span>
+                <span>📝 4</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-card-tag tag-violet">Dev</span>
+              <div class="kanban-card-title">Search indexing</div>
+              <div class="kanban-card-desc">Integrate Algolia search</div>
+              <div class="kanban-card-footer">
+                <span>✅ Done</span>
+                <span>🚀 1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Features (Featured) ═══ -->
+  <section class="section" id="features">
+    <div class="container">
+      <span class="section-label">Features</span>
+      <h2 class="section-title">Everything you need, nothing you don't.</h2>
+      <p class="section-sub">Loopline brings together the tools your team already loves, with powerful features built from the ground up.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Kanban Boards</h3>
+          <p>Drag-and-drop task management with customizable columns, swimlanes, and WIP limits that keep your team moving.</p>
+          <p style="margin-top:12px;"><a href="features.html" style="color:var(--blue);font-size:14px;font-weight:600;">Learn more →</a></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Timeline View</h3>
+          <p>Project scheduling made visual. Map out milestones, dependencies, and deadlines on an interactive Gantt-style timeline.</p>
+          <p style="margin-top:12px;"><a href="features.html" style="color:var(--blue);font-size:14px;font-weight:600;">Learn more →</a></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Team Docs</h3>
+          <p>Collaborative living documents with rich embeds, real-time editing, and version history that never loses a word.</p>
+          <p style="margin-top:12px;"><a href="features.html" style="color:var(--blue);font-size:14px;font-weight:600;">Learn more →</a></p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="features.html" class="btn btn-outline">View All Features →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to streamline your workflow?</h2>
+      <p>Join thousands of teams already using Loopline. Start free — no credit card needed.</p>
+      <form class="cta-form" novalidate>
+        <input type="email" placeholder="Enter your work email" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Get Started</button>
+      </form>
+      <p class="cta-success">🎉 Thanks for signing up! We'll be in touch soon.</p>
+      <p class="cta-error"></p>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Loopline. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
