@@ -748,7 +748,7 @@ function sh(e) {
   SFX.flush();
   SFX.humStart();
   ht = gsap.to(hp, {
-    val: 100, duration: 0.8, ease: 'none',
+    val: 100, duration: 0.4, ease: 'none',
     onUpdate: function() { sf.style.width = hp.val + '%'; },
     onComplete: function() {
       ic = true; sb.classList.add('is-c');
