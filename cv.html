@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JACQUES DU PLESSIS /// CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#000;--white:#eee;--red:#c00;--rg:#f33;
+  --g1:#ddd;--g2:#aaa;--g3:#777;--g4:#555;--g5:#333;--g6:#222;--g7:#181818;--g8:#111;--g9:#080808;
+  --bt:4px;--nav:60px
+}
+html{scroll-behavior:smooth;background:var(--black);color:var(--white);font-family:'Space Grotesk','Inter',sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100vh;overflow-x:hidden;background:var(--black);padding:calc(var(--nav) + 32px) 24px 60px;max-width:960px;margin:0 auto}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:var(--red);color:var(--black)}
+
+.nav{
+  position:fixed;top:0;left:0;right:0;height:var(--nav);display:flex;align-items:center;
+  justify-content:space-between;padding:0 32px;z-index:100;background:var(--g9);
+  border-bottom:var(--bt) solid var(--g5);
+}
+.nav-logo{font-size:1rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--white);transition:color .2s}
+.nav-logo:hover{color:var(--red)}
+.nav-l{display:flex;gap:28px}
+.nav-lk{
+  font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;
+  color:var(--g3);padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s
+}
+.nav-lk:hover{color:var(--white);border-color:var(--red)}
+
+/* ─── RIVETS ─── */
+.nr{
+  position:absolute;width:10px;height:10px;background:var(--g6);border-radius:50%;
+  box-shadow:inset 1px 1px 0 var(--g4),1px 1px 0 var(--black)
+}
+.nr-tl{top:6px;left:6px}.nr-tr{top:6px;right:6px}.nr-bl{bottom:6px;left:6px}.nr-br{bottom:6px;right:6px}
+
+/* ─── HEADER ─── */
+.cv-h{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:40px;
+  margin-bottom:48px;flex-wrap:wrap
+}
+.cv-hl h1{
+  font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:.02em;line-height:1.05;text-transform:uppercase;margin-bottom:6px
+}
+.cv-hl h1 span{color:var(--red)}
+.cv-hl .sub{font-size:.75rem;font-weight:500;color:var(--g3);letter-spacing:.15em;text-transform:uppercase}
+.cv-badge{
+  display:flex;gap:6px;flex-wrap:wrap;margin-top:10px
+}
+.cv-badge span{
+  font-family:'Space Grotesk',monospace;font-size:.5rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.12em;padding:3px 8px;background:var(--g8);border:2px solid var(--g5);color:var(--g4)
+}
+.cv-hr{
+  text-align:right;font-size:.7rem;font-weight:500;color:var(--g3);letter-spacing:.08em;
+  display:flex;flex-direction:column;gap:6px;flex-shrink:0
+}
+.cv-hr a{color:var(--g1);transition:color .2s}
+.cv-hr a:hover{color:var(--red)}
+.cv-hr .avail{font-size:.6rem;color:var(--g4);letter-spacing:.1em;text-transform:uppercase}
+
+/* ─── DIVIDER ─── */
+.dv{height:var(--bt);background:var(--g5);margin:40px 0}
+.dv--s{margin:24px 0}
+
+/* ─── SECTION ─── */
+.sec{margin-bottom:40px}
+.sh{
+  display:flex;align-items:center;gap:10px;margin-bottom:20px;
+  font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.25em;color:var(--red);border-bottom:3px solid var(--g6);padding-bottom:8px
+}
+.sh::before{content:'/// ';color:var(--g5);font-weight:400}
+
+/* ─── SUMMARY ─── */
+.sum{font-size:.85rem;font-weight:400;color:var(--g3);line-height:1.8;max-width:720px}
+.sum strong{color:var(--g1)}
+
+/* ─── SKILLS GRID ─── */
+.sk-g{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px
+}
+.sk-grp{
+  background:var(--g8);border:var(--bt) solid var(--g5);padding:14px;position:relative
+}
+.sk-grp::before{
+  content:'';position:absolute;inset:-6px;border:1px solid var(--g6);pointer-events:none
+}
+.sk-grp h3{
+  font-size:.55rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;
+  color:var(--g4);margin-bottom:10px;border-bottom:2px solid var(--g6);padding-bottom:4px
+}
+.sk-ts{display:flex;flex-wrap:wrap;gap:6px}
+.sk-t{
+  font-family:'Space Grotesk',monospace;font-size:.5rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.1em;padding:3px 8px;background:var(--g7);border:2px solid var(--g5);color:var(--g3)
+}
+.sk-t.a{border-color:var(--red);color:var(--red);background:rgba(204,0,0,.08)}
+
+/* ─── PROJECTS ─── */
+.pj-l{display:flex;flex-direction:column;gap:16px}
+.pj-c{
+  background:var(--g8);border:var(--bt) solid var(--g5);padding:16px;position:relative;transition:border-color .2s
+}
+.pj-c:hover{border-color:var(--red)}
+.pj-c h3{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--g1);margin-bottom:3px}
+.pj-c .type{font-size:.55rem;font-weight:600;color:var(--red);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.pj-c p{font-size:.75rem;font-weight:400;color:var(--g3);line-height:1.6}
+.pj-c .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.pj-c .tags span{
+  font-family:'Space Grotesk',monospace;font-size:.45rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.1em;padding:2px 7px;background:var(--g7);border:1px solid var(--g5);color:var(--g4)
+}
+.pj-c .nr2{
+  position:absolute;width:8px;height:8px;background:var(--g6);border-radius:50%;
+  box-shadow:inset 1px 1px 0 var(--g4),1px 1px 0 var(--black)
+}
+.pj-c .nr2-tl{top:-4px;left:-4px}.pj-c .nr2-tr{top:-4px;right:-4px}.pj-c .nr2-bl{bottom:-4px;left:-4px}.pj-c .nr2-br{bottom:-4px;right:-4px}
+
+/* ─── EXPERIENCE ─── */
+.exp-i{
+  display:flex;gap:20px;padding:16px 0;border-bottom:2px solid var(--g6)
+}
+.exp-i:last-child{border-bottom:none}
+.exp-d{font-family:'Space Grotesk',monospace;font-size:.6rem;font-weight:600;color:var(--g4);white-space:nowrap;min-width:110px;padding-top:2px;letter-spacing:.05em}
+.exp-di h3{font-size:.8rem;font-weight:700;color:var(--g1);margin-bottom:2px;letter-spacing:.02em}
+.exp-di .comp{font-size:.65rem;font-weight:600;color:var(--red);margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase}
+.exp-di p{font-size:.75rem;font-weight:400;color:var(--g3);line-height:1.6}
+
+/* ─── EDUCATION ─── */
+.edu-i{display:flex;gap:20px;padding:12px 0}
+.edu-i h3{font-size:.8rem;font-weight:700;color:var(--g1);margin-bottom:2px}
+.edu-i .detail{font-size:.7rem;font-weight:400;color:var(--g3);line-height:1.6}
+
+/* ─── CONTACT BUTTONS ─── */
+.ct-l{display:flex;gap:12px;flex-wrap:wrap}
+.ct-l a{
+  display:inline-flex;align-items:center;gap:6px;font-family:'Space Grotesk',monospace;
+  font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+  padding:8px 18px;border:var(--bt) solid var(--g5);color:var(--g2);background:transparent;transition:color .2s,background .2s,border-color .2s
+}
+.ct-l a:hover{color:var(--black);background:var(--red);border-color:var(--red)}
+.ct-l .p{color:var(--black);background:var(--red);border-color:var(--red)}
+.ct-l .p:hover{background:var(--white);border-color:var(--white);color:var(--black)}
+
+/* ─── FOOTER ─── */
+.ft{text-align:center;font-size:.6rem;font-weight:500;color:var(--g5);letter-spacing:.12em;text-transform:uppercase;padding:20px 0}
+.ft span{font-size:.55rem;color:var(--g6)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:768px){
+  body{padding:calc(var(--nav) + 20px) 16px 40px}
+  .nav{padding:0 16px;height:52px}.nav-l{gap:14px}.nav-lk{font-size:.6rem}
+  .cv-h{flex-direction:column;gap:16px}
+  .cv-hr{text-align:left}
+  .sk-g{grid-template-columns:1fr 1fr}
+  .exp-i{flex-direction:column;gap:4px}
+  .exp-d{min-width:auto}
+  .ct-l a{width:100%;justify-content:center}
+}
+@media(max-width:480px){.sk-g{grid-template-columns:1fr}}
+@media print{
+  body{background:var(--white);color:var(--black);padding:20px}
+  :root{--black:#fff;--white:#111;--red:#c00;--g1:#111;--g3:#555;--g4:#777;--g5:#ccc;--g6:#ddd;--g7:#eee;--g8:#f5f5f5;--g9:#fafafa;--bt:2px}
+  .nav{display:none}
+  .sk-t.a{border-color:var(--red);color:var(--red)}
+  .ct-l .p{color:#fff}
+  .pj-c .nr2,.nr{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nr nr-tl"></div><div class="nr nr-tr"></div>
+  <a href="/" class="nav-logo">JD_</a>
+  <div class="nav-l">
+    <a href="/" class="nav-lk">PORTFOLIO</a>
+    <a href="/cv.html" class="nav-lk">CV</a>
+  </div>
+  <div class="nr nr-bl"></div><div class="nr nr-br"></div>
+</nav>
+
+<header class="cv-h">
+  <div class="cv-hl">
+    <h1>Jacques<br><span>du Plessis</span></h1>
+    <p class="sub">Self-taught Web Developer &middot; Frontend</p>
+    <div class="cv-badge">
+      <span>HTML/CSS/JS</span>
+      <span>Responsive</span>
+      <span>Cloudflare</span>
+    </div>
+  </div>
+  <div class="cv-hr">
+    <a href="mailto:jacquesd264160@gmail.com">jacquesd264160@gmail.com</a>
+    <span>Cape Town, South Africa</span>
+    <span class="avail">Available for freelance &amp; collaboration</span>
+  </div>
+</header>
+
+<section class="sec">
+  <h2 class="sh">About</h2>
+  <p class="sum">
+    Self-taught web developer who builds <strong>atmospheric, custom websites</strong> from scratch — no templates, no page builders, just HTML, CSS, and JavaScript. Focused on responsive, accessible design with a strong visual identity. Each project is an exercise in atmosphere first, code second.
+  </p>
+</section>
+
+<div class="dv dv--s"></div>
+
+<section class="sec">
+  <h2 class="sh">Skills</h2>
+  <div class="sk-g">
+    <div class="sk-grp">
+      <h3>Languages</h3>
+      <div class="sk-ts">
+        <span class="sk-t a">HTML5</span>
+        <span class="sk-t a">CSS3</span>
+        <span class="sk-t a">JavaScript</span>
+        <span class="sk-t">Python</span>
+      </div>
+    </div>
+    <div class="sk-grp">
+      <h3>Design</h3>
+      <div class="sk-ts">
+        <span class="sk-t">Responsive</span>
+        <span class="sk-t">Flexbox/Grid</span>
+        <span class="sk-t">Dark UI</span>
+        <span class="sk-t">Typography</span>
+      </div>
+    </div>
+    <div class="sk-grp">
+      <h3>Tools</h3>
+      <div class="sk-ts">
+        <span class="sk-t">VS Code</span>
+        <span class="sk-t">Git</span>
+        <span class="sk-t">GitHub</span>
+        <span class="sk-t">Terminal</span>
+        <span class="sk-t">Linux</span>
+      </div>
+    </div>
+    <div class="sk-grp">
+      <h3>Deploy</h3>
+      <div class="sk-ts">
+        <span class="sk-t">Cloudflare Pages</span>
+        <span class="sk-t">Netlify</span>
+        <span class="sk-t">DNS</span>
+        <span class="sk-t">CI/CD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dv dv--s"></div>
+
+<div class="sec">
+  <h2 class="sh">Projects</h2>
+  <div class="pj-l">
+
+    <div class="pj-c">
+      <div class="nr2 nr2-tl"></div><div class="nr2 nr2-tr"></div>
+      <h3>Ember &amp; Ash</h3>
+      <div class="type">Fine Dining Restaurant</div>
+      <p>Moody, dark-warm palette with magazine-style layout, scroll-reveal menu, and reservation system. 5-page site with duotone imagery and atmospheric typography.</p>
+      <div class="tags">
+        <span>HTML/CSS</span>
+        <span>JS</span>
+        <span>Responsive</span>
+        <span>5 pages</span>
+      </div>
+      <div class="nr2 nr2-bl"></div><div class="nr2 nr2-br"></div>
+    </div>
+
+    <div class="pj-c">
+      <div class="nr2 nr2-tl"></div><div class="nr2 nr2-tr"></div>
+      <h3>Iron Row</h3>
+      <div class="type">Boxing Gym</div>
+      <p>High-energy, aggressive high-contrast design with class schedule, membership calculator, trainer profiles, and testimonials section. 8-page site.</p>
+      <div class="tags">
+        <span>HTML/CSS</span>
+        <span>JS</span>
+        <span>Schedule Filter</span>
+        <span>Price Calculator</span>
+      </div>
+      <div class="nr2 nr2-bl"></div><div class="nr2 nr2-br"></div>
+    </div>
+
+    <div class="pj-c">
+      <div class="nr2 nr2-tl"></div><div class="nr2 nr2-tr"></div>
+      <h3>Drift Boutique Coastal Retreat</h3>
+      <div class="type">Hotel &amp; Resort</div>
+      <p>Premium coastal retreat site with room gallery, experience packages, spa section, and direct booking flow. Clean, airy, high-end editorial feel.</p>
+      <div class="tags">
+        <span>HTML/CSS</span>
+        <span>JS</span>
+        <span>Gallery</span>
+        <span>Booking UI</span>
+      </div>
+      <div class="nr2 nr2-bl"></div><div class="nr2 nr2-br"></div>
+    </div>
+
+    <div class="pj-c">
+      <div class="nr2 nr2-tl"></div><div class="nr2 nr2-tr"></div>
+      <h3>Loopline</h3>
+      <div class="type">SaaS Product</div>
+      <p>Dark techy landing page for a productivity SaaS. Animated dashboard mockup, pricing toggle with monthly/yearly, FAQ accordion, and feature grid.</p>
+      <div class="tags">
+        <span>HTML/CSS</span>
+        <span>JS</span>
+        <span>Pricing Toggle</span>
+        <span>FAQ Accordion</span>
+      </div>
+      <div class="nr2 nr2-bl"></div><div class="nr2 nr2-br"></div>
+    </div>
+
+    <div class="pj-c">
+      <div class="nr2 nr2-tl"></div><div class="nr2 nr2-tr"></div>
+      <h3>Vertex</h3>
+      <div class="type">Real Estate</div>
+      <p>Modern apartment complex site with property listing grid, floor plan layouts, neighbourhood info, and contact form. Clean architectural aesthetic.</p>
+      <div class="tags">
+        <span>HTML/CSS</span>
+        <span>JS</span>
+        <span>Property Grid</span>
+        <span>Contact Form</span>
+      </div>
+      <div class="nr2 nr2-bl"></div><div class="nr2 nr2-br"></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="dv dv--s"></div>
+
+<section class="sec">
+  <h2 class="sh">Experience</h2>
+
+  <div class="exp-i">
+    <div class="exp-d">2025 — Present</div>
+    <div class="exp-di">
+      <h3>Independent Web Developer</h3>
+      <div class="comp">Freelance &mdash; Self-directed</div>
+      <p>Built 5 full-scale concept websites across different industries (hospitality, fitness, real estate, SaaS, music). Each project handled end-to-end: concept, design, development, and deployment.</p>
+    </div>
+  </div>
+
+</section>
+
+<div class="dv dv--s"></div>
+
+<section class="sec">
+  <h2 class="sh">Certificates</h2>
+  <div class="pj-l">
+
+    <div class="pj-c">
+      <div class="nr2 nr2-tl"></div><div class="nr2 nr2-tr"></div>
+      <h3>The Web Developer Bootcamp 2026</h3>
+      <div class="type">Udemy &middot; Colt Steele &middot; 74 hours</div>
+      <p>Comprehensive full-stack web development course covering HTML, CSS, JavaScript, responsive design, and deployment. Completed June 2026.</p>
+      <div class="tags">
+        <span>HTML/CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive</span>
+        <span>74h</span>
+      </div>
+      <div class="nr2 nr2-bl"></div><div class="nr2 nr2-br"></div>
+    </div>
+
+    <div class="pj-c">
+      <div class="nr2 nr2-tl"></div><div class="nr2 nr2-tr"></div>
+      <h3>Graphic Design Masterclass &mdash; Learn GREAT Design</h3>
+      <div class="type">Udemy &middot; Lindsay Marsh &middot; 32 hours</div>
+      <p>Foundations of graphic design including typography, colour theory, layout, branding, and visual hierarchy. Completed February 2026.</p>
+      <div class="tags">
+        <span>Typography</span>
+        <span>Colour Theory</span>
+        <span>Layout</span>
+        <span>Branding</span>
+        <span>32h</span>
+      </div>
+      <div class="nr2 nr2-bl"></div><div class="nr2 nr2-br"></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="dv dv--s"></div>
+
+<section class="sec">
+  <h2 class="sh">Education</h2>
+
+  <div class="edu-i">
+    <div class="exp-d">Self-taught</div>
+    <div>
+      <h3>Web Development &mdash; Frontend Focus</h3>
+      <p class="detail">HTML, CSS, JavaScript, responsive design, Git, Linux, deployment via Cloudflare Pages &amp; Netlify.</p>
+    </div>
+  </div>
+
+</section>
+
+<div class="dv"></div>
+
+<section class="sec">
+  <h2 class="sh">Get in Touch</h2>
+  <div class="ct-l">
+    <a href="mailto:jacquesd264160@gmail.com" class="p">&#9993; Email me</a>
+    <a href="https://jacques-portfolio.pages.dev">&#9670; Portfolio</a>
+    <a href="https://github.com/wyrmic-arch">&#9671; GitHub</a>
+  </div>
+</section>
+
+<div class="dv dv--s"></div>
+
+<p class="ft">
+  &copy; 2026 Jacques du Plessis &mdash; Built with HTML &amp; CSS<br>
+  <span>PDF version available via browser Print &rarr; Save as PDF</span>
+</p>
+
+</body>
+</html>
