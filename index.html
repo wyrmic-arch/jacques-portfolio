@@ -204,6 +204,19 @@ body::after{
   color:var(--g4);margin-top:3px;letter-spacing:.1em;text-transform:uppercase;transition:color .15s
 }
 .si2:hover .si2-c{color:var(--red)}
+.si2-d{
+  font-family:'Space Grotesk',monospace;font-size:.5rem;font-weight:500;
+  color:var(--g5);margin-top:2px;letter-spacing:.06em;line-height:1.3;
+  max-height:0;overflow:hidden;transition:max-height .25s ease,color .15s
+}
+.si2:hover .si2-d{max-height:30px;color:var(--g3)}
+.si2-p{
+  font-family:'Space Grotesk',monospace;font-size:.45rem;font-weight:500;
+  color:var(--g5);margin-top:1px;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  max-height:0;overflow:hidden;transition:max-height .25s ease,color .15s
+}
+.si2:hover .si2-p{max-height:16px;color:var(--g4)}
+.si2-i{overflow:hidden}
 .si2:focus,.si2.f{
   border-color:var(--red);background:var(--g7);
   box-shadow:0 0 12px rgba(204,0,0,.2),inset 0 0 12px rgba(204,0,0,.05)
@@ -436,8 +449,9 @@ body::after{
     <h2 class="sl">/// ABOUT_</h2>
     <div class="ag">
       <div class="at">
-        <p class="ab" data-c>Web developer with a background in precision-based trades. Built for clean layouts, strong grids, and sharp typography. Focused on editorial and branding projects that feel intentional, not noisy.</p>
-        <p class="ab" data-c>Currently working as an Independent Web Developer, creating minimalist editorial layouts and brand identity systems. Previously led custom construction projects — high-precision measurement and execution, now applied to pixel-perfect development.</p>
+        <p class="ab" data-c>Independent web developer based in Mtwalume, South Africa. I spent years building with concrete and steel — measured to the millimetre, leveled by hand, finished to last. That same discipline now goes into every line of code. Clean execution. Intentional structure. Zero noise.</p>
+        <p class="ab" data-c>This portfolio is itself a statement — a brutalist OS interface that rejects decorative excess. Every interaction has weight, every pixel earns its place. That philosophy carries into every site I build: form that follows function, typography that leads, and interfaces that feel built to last rather than just shipped.</p>
+        <p class="ab" data-c>I focus on editorial layouts, brand identity systems, and performance-first front-end work. No bloated frameworks. No unnecessary motion. Just architecture-grade work — whether the material is steel studs or CSS grids.</p>
         <div class="ask">
           <span class="st" data-c>FIGMA</span>
           <span class="st" data-c>AFFINITY</span>
@@ -562,11 +576,41 @@ var SFX = (function() {
 })();
 
 var projects = [
-  {title:'DRIFT',category:'Boutique Coastal Retreat',filter:'coastal',image:'projects/drift/assets/images/hero.webp',url:'projects/drift/index.html',cs:'case-studies/drift.html'},
-  {title:'EMBER & ASH',category:'Fine Dining Restaurant',filter:'dining',image:'projects/ember-and-ash/assets/images/hero.webp',url:'projects/ember-and-ash/index.html',cs:'case-studies/ember-and-ash.html'},
-  {title:'IRON ROW',category:'Boxing Gym',filter:'gym',image:'projects/iron-row/assets/images/hero.webp',url:'projects/iron-row/index.html',cs:'case-studies/iron-row.html'},
-  {title:'LOOPLINE',category:'Productivity SaaS',filter:'saas',image:'projects/loopline/assets/images/working.webp',url:'projects/loopline/index.html',cs:'case-studies/loopline.html'},
-  {title:'VERTEX',category:'Construction & Development',filter:'construction',image:'projects/vertex/assets/images/hero.webp',url:'projects/vertex/index.html',cs:'case-studies/vertex.html'}
+  {
+    title:'DRIFT', category:'Boutique Coastal Retreat', filter:'coastal',
+    image:'projects/drift/assets/images/hero.webp', url:'projects/drift/index.html', cs:'case-studies/drift.html',
+    desc:'Luxury oceanside escape — warm, tactile, serene.',
+    colors:'Cream #FDF8F0 · Terracotta #C66B4F · Navy #1B2A3B',
+    why:'To capture the calm of a cliffside retreat without resorting to generic beach tropes. The cream reads like sun-washed linen; terracotta echoes the clay cliffs; navy grounds it like the deep Atlantic.'
+  },
+  {
+    title:'EMBER & ASH', category:'Fine Dining Restaurant', filter:'dining',
+    image:'projects/ember-and-ash/assets/images/hero.webp', url:'projects/ember-and-ash/index.html', cs:'case-studies/ember-and-ash.html',
+    desc:'Open-fire PNW kitchen — instinct over timer, fire over formula.',
+    colors:'Charcoal #1a1410 · Amber #c4933c · Warm off-white #f5f0eb',
+    why:'The dark smoky backdrop mirrors a hearth interior; amber cuts through like embers glowing in the dark. No thermostats, no timers — the palette had to feel raw, primal, and honest.'
+  },
+  {
+    title:'IRON ROW', category:'Boxing Gym', filter:'gym',
+    image:'projects/iron-row/assets/images/hero.webp', url:'projects/iron-row/index.html', cs:'case-studies/iron-row.html',
+    desc:'Chicago boxing — hit hard, train harder.',
+    colors:'Black #0a0a0a · Red #c91e1e · Grey #8a8a8a',
+    why:'Classic fight palette. Black is the void before the bell; red is blood, urgency, the split-second decision. Against total black, the red hits like a jab — immediate and unforgettable.'
+  },
+  {
+    title:'LOOPLINE', category:'Productivity SaaS', filter:'saas',
+    image:'projects/loopline/assets/images/working.webp', url:'projects/loopline/index.html', cs:'case-studies/loopline.html',
+    desc:'Intelligent workspace — tasks, docs, tools, one place.',
+    colors:'Near-black #0b0d11 · Blue #3b82f6 · Violet #8b5cf6',
+    why:'Dark UI signals a serious tool, not a toy. Blue brings clarity and trust — essential for enterprise SaaS. Violet adds a creative counterpoint, hinting at the flexibility inside.'
+  },
+  {
+    title:'VERTEX', category:'Construction & Development', filter:'construction',
+    image:'projects/vertex/assets/images/hero.webp', url:'projects/vertex/index.html', cs:'case-studies/vertex.html',
+    desc:'Premier construction firm — 27 years, 340+ projects.',
+    colors:'White #ffffff · Navy #0f172a · Orange #d97706',
+    why:'White and navy read blueprints and authority — professional, grounded, trustworthy. Orange brings the construction site energy: hard hats, warning tape, the human sweat behind every build.'
+  }
 ];
 
 /* ─── CURSOR (rAF, no GSAP ticker) ─── */
@@ -841,7 +885,9 @@ function bG() {
     inf.className = 'si2-i';
     var ti = document.createElement('div'); ti.className = 'si2-ti'; ti.textContent = p.title;
     var ca = document.createElement('div'); ca.className = 'si2-c'; ca.textContent = p.category;
-    inf.appendChild(ti); inf.appendChild(ca);
+    var de = document.createElement('div'); de.className = 'si2-d'; de.textContent = p.desc;
+    var pa = document.createElement('div'); pa.className = 'si2-p'; pa.textContent = p.colors;
+    inf.appendChild(ti); inf.appendChild(ca); inf.appendChild(de); inf.appendChild(pa);
     it.appendChild(im); it.appendChild(inf);
 
     it.addEventListener('click',function(){var idx=parseInt(this.dataset.idx);fGi(fI.indexOf(idx));SFX.thunk();oP(idx)});
