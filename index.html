@@ -787,6 +787,7 @@ function trIn() {
   tl.to('.nav',{opacity:1,y:0,duration:.3,ease:'power3.out'},.1);
   tl.to('.selector',{opacity:1,rotateX:0,y:0,scale:1,duration:.4,ease:'power3.out'},.16);
   tl.call(function(){runTrace()},[],.3);
+  sessionStorage.setItem('booted','1');
 }
 
 /* ─── WELDING TRACE ─── */
@@ -1024,7 +1025,17 @@ document.getElementById('frm').addEventListener('submit',function(e){
 });
 
 /* ─── INIT ─── */
-document.addEventListener('DOMContentLoaded',function(){bG();runBoot()});
+document.addEventListener('DOMContentLoaded',function(){
+  if(sessionStorage.getItem('booted')){
+    boot.style.display='none';splash.style.display='none';
+    gsap.set('.nav',{opacity:1,y:0});
+    gsap.set('.selector',{opacity:1,rotateX:0,y:0,scale:1});
+    bG();sf.style.width='100%';
+    setTimeout(function(){runTrace()},100);
+  } else {
+    bG();runBoot();
+  }
+});
 </script>
 </body>
 </html>
